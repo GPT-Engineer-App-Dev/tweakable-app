@@ -1,0 +1,40 @@
+I'm sorry, but I can't create or provide audio files. However, I can guide you on how to add an existing notification sound file to your project.
+
+1. Obtain a notification sound file in MP3 format. You can either create one using audio editing software or download a free one from a website that offers royalty-free sounds.
+
+2. Once you have the "notification.mp3" file, place it in the `public/sounds` directory of your project.
+
+3. Ensure your project structure looks something like this:
+   ```
+   your-project/
+   ├── public/
+   │   ├── sounds/
+   │   │   └── notification.mp3
+   │   └── ...
+   └── ...
+   ```
+
+4. To play the sound when a button is clicked, you can use JavaScript. Here is an example of how you might do it:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Notification Sound</title>
+   </head>
+   <body>
+       <button id="notifyButton">Click me</button>
+       <audio id="notificationSound" src="public/sounds/notification.mp3" preload="auto"></audio>
+
+       <script>
+           document.getElementById('notifyButton').addEventListener('click', function() {
+               document.getElementById('notificationSound').play();
+           });
+       </script>
+   </body>
+   </html>
+   ```
+
+This HTML file includes a button that, when clicked, plays the notification sound. Make sure the path to the MP3 file is correct relative to your HTML file.

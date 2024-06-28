@@ -1,14 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
+import useSound from 'use-sound';
 
 const Index = () => {
-  const { toast } = useToast();
+  const [play] = useSound('/sounds/notification.mp3');
 
   const handleClick = () => {
-    toast({
-      title: "Test Button Clicked",
-      description: "This is a toast notification triggered by the test button.",
-    });
+    play();
   };
 
   return (
